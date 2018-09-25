@@ -6,7 +6,7 @@
 #    By: szheng <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/10 15:34:38 by szheng            #+#    #+#              #
-#    Updated: 2018/07/15 16:38:47 by szheng           ###   ########.fr        #
+#    Updated: 2018/07/23 15:52:25 by szheng           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,11 +28,12 @@ PART2 = ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c ft_strclr.c \
 BONUS = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
 		ft_lstmap.c
 
-ADDED = ft_swap.c ft_sqrt.c ft_isprime.c ft_islower.c ft_isupper.c
+ADDED = ft_swap.c ft_sqrt.c ft_isprime.c ft_islower.c ft_isupper.c \
+		ft_puterror.c get_next_line.c ft_free_2d.c
 
 CC = gcc
 
-FLAGS = -Wall -Werror -Wextra -c -I.
+FLAGS = -Wall -Werror -Wextra -c -I libft.h
 
 SRC = $(PART1) $(PART2) $(BONUS) $(ADDED)
 
@@ -41,17 +42,17 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@ar rcs $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 $(OBJ): $(SRC)
-	gcc $(FLAGS) $(SRC)
+	@gcc $(FLAGS) $(SRC)
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 

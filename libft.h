@@ -6,7 +6,7 @@
 /*   By: szheng <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/10 16:00:12 by szheng            #+#    #+#             */
-/*   Updated: 2018/07/15 17:03:01 by szheng           ###   ########.fr       */
+/*   Updated: 2018/09/06 19:39:17 by szheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ int				ft_sqrt(unsigned int n);
 int				ft_isprime(unsigned int n);
 int				ft_islower(int c);
 int				ft_isupper(int c);
-
+void			ft_puterror(char *str);
+void			ft_free_2d(void **to_free);
 #endif
